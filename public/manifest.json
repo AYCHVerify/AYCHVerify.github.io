@@ -1,0 +1,15 @@
+{
+  "short_name": "Dadroit Verify Bar",
+  "name": "Dadroit Verify Bar",
+  "icons": [
+    {
+      "src": "https://verifybar.com/Verifybar Icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

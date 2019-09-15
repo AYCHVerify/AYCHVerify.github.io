@@ -1,0 +1,25 @@
+@import "./styles/color-style";
+@import "./styles/mixins";
+
+* {
+  box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+button, input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: auto;
+  min-width: 1032px;
+  max-width: 1312px;
+  margin: 0 64px;
+  @include from(1440px) {
+    margin: 0 auto;
+  }
+}

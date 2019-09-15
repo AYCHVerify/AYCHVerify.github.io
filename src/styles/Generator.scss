@@ -1,0 +1,220 @@
+@import "./color-style";
+@import "./mixins";
+
+#generator {
+  display: flex;
+  flex-direction: column;
+  background-color: $wh;
+  width: 100vw;
+  min-height: 100vh;
+
+  .navbar {
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 82px;
+    }
+
+    .navbar-logo {
+      img {
+        display: block;
+        width: 134px;
+        height: 45px;
+      }
+    }
+
+    .navbar-button {
+      color: $bl-medium;
+      cursor: pointer;
+    }
+  }
+
+  .home {
+    margin: 38px 0 auto;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 56px;
+
+    .toolbar-input {
+      border: 1px solid $bl-ov12;
+      height: 40px;
+      width: 280px;
+      padding: 9px 12px;
+    }
+
+    .toolbar-buttons {
+      padding: 14px 24px 14px;
+      height: 40px;
+      text-transform: unset;
+      margin: 0 8px 0 0;
+      transition: background-color 150ms ease-in-out;
+      &:last-child {
+        margin: 0;
+      }
+
+      &.add-file {
+        color: $pb;
+        border: 1px solid $bl-ov12;
+        &:hover {
+          background-color: $bl-ov04;
+        }
+        &:active {
+          background-color: $bl-ov08;
+        }
+      }
+
+      &.save-and-copy {
+        background-color: $pb;
+        color: $wh;
+        &:disabled {
+          opacity: 0.38;
+        }
+      }
+    }
+  }
+
+  .drop-block {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    flex: 1;
+
+    .drop-title {
+      margin: 0 0 14px;
+      color: $bl-low;
+    }
+
+    .drop-placeholder {
+      margin: auto;
+    }
+
+    .drop-table-block {
+      display: flex;
+      flex-direction: column;
+      min-height: 257px;
+      color: $bl-low;
+      border: 1px solid $bl-ov12;
+      width: 100%;
+    }
+
+    .table {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+
+      .table-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 32px;
+        border-top: 1px solid $bl-ov08;
+
+        &:first-child {
+          border: none;
+        }
+
+        padding: 0 16px 0;
+        .status-cell {
+          width: 12%;
+        }
+        .name-cell {
+          width: 28%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          padding: 0 16px 0 0;
+        }
+        .size-cell {
+          width: 8%;
+        }
+        .hash-cell {
+          width: 52%;
+        }
+      }
+
+      .verified {
+        display: flex;
+        align-items: center;
+        img {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+
+        p {
+          color: $success;
+          margin: 1px 0 0 7px;
+        }
+      }
+
+      .warning {
+        display: flex;
+        align-items: center;
+        img {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+
+        p {
+          color: $warning;
+          margin: 1px 0 0 7px;
+        }
+      }
+
+      .checking {
+        display: flex;
+        align-items: center;
+        img {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+        }
+
+        p {
+          color: $black-low;
+          margin: 1px 0 0 7px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin: 56px 0 0;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+    .copyright {
+      color: $bl-low;
+    }
+    .social-links {
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: $bl-low;
+        margin: 0 24px 0 0;
+        &:last-child {
+          margin: 0;
+        }
+
+        &:hover {
+          color: $bl-medium;
+        }
+      }
+    }
+  }
+
+  #clipboard_input {
+    color: $bl-low;
+    border: 1px solid $bl-ov12;
+    height: 40px;
+    padding: 12px 9px;
+  }
+}
